@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 12px;
+  /* display: flex;
+    flex-direction: column; */
+  background-color: #111827;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 10px;
+  
+}
+
+/* ------Navigation------- */
+
+
+.navbar {
+  margin: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.navbar .nav-items {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+}
+
+
+.navbar .nav-items .nav-link a {
+  font-size: 1.3rem;
+  padding: 8px;
+  color: #fff;
+  text-transform: capitalize;
+  font-family: 'Poppins', sans-serif;
+}
+.navbar .nav-items .active a {
+  font-size: 1.3rem;
+  padding: 8px;
+  color: #ffffff;
+  background-color: rgb(125, 59, 247);
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+.navbar .nav-items .nav-link:hover a {
+  font-size: 1.3rem;
+  padding: 8px;
+  color: #ffffff;
+  background-color: rgb(125, 59, 247);
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+/* -----Menu-icon----- */
+
+.humburger-menu {
+  position: relative;
+  
+
+}
+.humburger-menu i {
+  color: #fff;
+  font-size: 1.5rem;
+  display: none;
+
+}
+
+/* ----------Hero section----------- */
+
+.hero-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  color: #ffffff;
+  position: relative;
+
+}
+
+.hero-left-content {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  align-items: flex-start;
+  line-height: 2.3rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-title {
+  font-size: 1.8rem;
+}
+
+.hero-discription {
+  font-size: 1rem;
+  color: #a6ce28;
+}
+
+.hero-subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  font-size: 1.2rem;
+}
+
+
+.hero-subtitle img {
+  color: #70c82c;
+  width: 30px;
+  height: 30px;
+}
+
+
+/* -----Project Section------ */
+
+.project-head {
+  padding: 1.5rem 0;
+}
+
+.project-head .project-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 15px;
+  text-decoration-color: #8c2cc8;
+  text-decoration-thickness: 6px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.project-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center;
+}
+
+.project-1 {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+.project-2 {
+  grid-column: 2 /3;
+  grid-row: 1 / 2;
+}
+
+.project-3 {
+  grid-column: 1 /2;
+  grid-row: 2 / 3;
+}
+
+.project-4 {
+  grid-column: 2 /3;
+  grid-row: 2 / 3;
+}
+
+.project-img img {
+  width: 60%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.project-dic h3{
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Social media icon */
+
+.social-items{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.social-items .social-link{
+  font-size: 2.2rem;
+}
+.social-items .social-link:hover{
+  transform: scale(1.1);
+  transition: all 5ms ease-in;
+}
+.fa-github{
+  color: #fff;
+}
+.fa-facebook{
+  color: #ffffff;
+}
+.fa-linkedin{
+  color: #0A66C2;
+  background-color: #ffffff;
+}
+
+/* Media -quire */
+
+@media screen and (max-width:768px) {
+  .navbar .nav-items{
+    display: none;
+  }
+
+  .humburger-menu i {
+     display: block;
+  }
+
+  .hero-content{
+    flex-direction: column;
+  }
+
+  .hero-left-content{
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .project-item{
+    display: flex;
+    flex-direction: column;
+  }
+
+}
